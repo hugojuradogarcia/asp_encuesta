@@ -47,7 +47,7 @@
 						<div class="form-group">
 							<label for="input_edad" class="col-sm-3 control-label">Edad: </label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" id="input_edad" placeholder="Ingreso de labores Aspen">
+								<input type="text" class="form-control" id="input_edad" placeholder="Edad">
 							</div>
 						</div>
 
