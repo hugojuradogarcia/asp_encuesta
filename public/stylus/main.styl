@@ -15,102 +15,109 @@ gris10 = #e9e9e9
 gris11 = #ddd
 
 body
+    background-color #eaf6ff !important
     color gris
     font-size 16px
-
+h1
+    color gris8 !important
+#logo
+    margin 0px auto
 #content
+    height 100%
     margin 15px auto
+    position relative
     text-align center
     width 600px
-    position relative
-    height 100%
-
 #wrapper
-    box-shadow 0px 0px 3px gris5
-    border-radius 10px
-    border 2px solid white
     background-color gris1
-    width 600px
+    border 2px solid white
+    border-radius 10px
+    box-shadow 0px 0px 3px gris5
     overflow hidden
-
+    width 600px
 #steps
-    width 600px
     overflow hidden
+    width 600px
     form
         fieldset
             border none
-            padding 0px 0px 20px 0px
             margin 0
+            padding 0px 0px 20px 0px
         legend
-            text-align left
             background-color gris2
-            color gris8
-            font-size 24px
-            text-shadow 1px 1px 1px white
-            font-weight bold
-            float left
-            width 590px
-            padding 5px 0px 5px 10px
-            margin 10px 0px
             border-bottom 1px solid white
             border-top 1px solid gris3
-        .form-input
+            color gris8
             float left
-            clear both
-            margin 5px 0px
+            font-size 24px
+            font-weight bold
+            margin 10px 0px
+            padding 5px 0px 5px 10px
+            text-align left
+            text-shadow 1px 1px 1px white
+            width 590px
+        .form-input
             background-color gris4
             border 1px solid white
-            width 400px
-            padding 10px
-            margin-left 100px
             border-radius 5px
             box-shadow 0px 0px 3px gris5
+            clear both
+            float left
+            margin 5px 0px
+            margin-left 50px
+            padding 10px
+            width 500px
             label
-                width 160px
-                float left
-                text-align right
-                margin-right 15px
-                line-height 26px
                 color gris8
-                text-shadow 1px 1px 1px white
+                float left
                 font-weight bold
+                line-height 26px
+                margin-right 15px
+                margin-top 5px       
+                text-align right
+                text-shadow 1px 1px 1px white
+                width 50%
             &.submit
                 background none
                 border none
                 box-shadow none
 	        input
+                width 50%   
 	            &:focus
-	                box-shadow 0px 0px 3px gris5
-	                background-color white
-	            &[readonly]
+                    background-color white
+                    box-shadow 0px 0px 3px gris5
+	            &[readonly="readonly"]
+                    color darkgray
+                    cursor not-allowed
+                &[readonly=""]
 	            	color darkgray
-	            	cursor not-allowed
-        button
-            border none
-            outline none
-            border-radius 10px
-            color white
-            display block
-            cursor pointer
-            margin 0px auto
-            clear both
-            padding 7px 25px
-            text-shadow 0 1px 1px gris6
-            font-weight bold
-            font-size 22px
-            box-shadow 0px 0px 3px gris5
-            background #4797ED
-            &:hover
-                background gris7
-                color gris8
-                text-shadow 1px 1px 1px white
+	            	cursor pointer
+            #registerButton
+                background #4797ED
+                border none
+                border-radius 10px
+                box-shadow 0px 0px 3px gris5
+                clear both
+                color white
+                cursor pointer
+                display block
+                font-size 22px
+                font-weight bold
+                margin 0px auto
+                outline none
+                padding 7px 25px
+                text-shadow 0 1px 1px gris6
+                &:hover
+                    background gris7
+                    color gris8
+                    text-shadow 1px 1px 1px white
 
 .step
     float left
     width 600px
 
 #navigation
-    height 45px
+    height 90px
     background-color gris10
     border-top 1px solid white
     border-radius 0px 0px 10px 10px
@@ -163,9 +170,7 @@ span
         width 20px
         height 20px
 
-#steps form input:not([type=radio]),
-#steps form textarea,
-#steps form select
+#steps form input:not([type=radio]), #steps form textarea, #steps form .select
     background white
     border 1px solid gris11
     border-radius 3px

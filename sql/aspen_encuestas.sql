@@ -8,11 +8,14 @@ USE `aspen_encuestas` ;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_empleados`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_empleados` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_empleados` (
   `asp_idempleado` INT NOT NULL,
   `asp_puesto` VARCHAR(60) NULL,
   `asp_ingreso` DATE NULL,
   `asp_edad` INT NULL,
+  `asp_date` DATE NULL,
   PRIMARY KEY (`asp_idempleado`))
 ENGINE = InnoDB;
 
@@ -20,6 +23,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_educacion`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_educacion` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_educacion` (
   `asp_bachi` INT NULL,
   `asp_bachi_con` INT NULL,
@@ -52,6 +57,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_inf_gral`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_inf_gral` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_inf_gral` (
   `asp_inmueble` INT NULL,
   `asp_edo_civil` INT NULL,
@@ -73,6 +80,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_egresos`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_egresos` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_egresos` (
   `asp_luz` INT NULL,
   `asp_luz_monto` INT NULL,
@@ -104,6 +113,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_inversiones`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_inversiones` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_inversiones` (
   `asp_educ` INT NULL,
   `asp_educ_monto` DECIMAL(2) NULL,
@@ -129,6 +140,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `aspen_encuestas`.`aspen_activos`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `aspen_encuestas`.`aspen_activos` ;
+
 CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_activos` (
   `asp_compu` INT NULL,
   `asp_telefono` INT NULL,
