@@ -16,7 +16,7 @@ gris11 = #ddd
 
 body
     color gris
-    font-size 13px
+    font-size 16px
 
 #content
     margin 15px auto
@@ -29,7 +29,7 @@ body
     box-shadow 0px 0px 3px gris5
     border-radius 10px
     border 2px solid white
-    background-color #gris1
+    background-color gris1
     width 600px
     overflow hidden
 
@@ -43,7 +43,7 @@ body
             margin 0
         legend
             text-align left
-            background-color #gris2
+            background-color gris2
             color gris8
             font-size 24px
             text-shadow 1px 1px 1px white
@@ -54,7 +54,7 @@ body
             margin 10px 0px
             border-bottom 1px solid white
             border-top 1px solid gris3
-        p
+        .form-input
             float left
             clear both
             margin 5px 0px
@@ -78,10 +78,13 @@ body
                 background none
                 border none
                 box-shadow none
-        input
-            &:focus
-                box-shadow 0px 0px 3px gris5
-                background-color white
+	        input
+	            &:focus
+	                box-shadow 0px 0px 3px gris5
+	                background-color white
+	            &[readonly]
+	            	color darkgray
+	            	cursor not-allowed
         button
             border none
             outline none
@@ -110,22 +113,23 @@ body
     height 45px
     background-color gris10
     border-top 1px solid white
-    border-bottom-left-radius 10px
-    border-bottom-right-radius 10px
+    border-radius 0px 0px 10px 10px
     ul
         list-style none
         float left
         margin-left 22px
+        margin-top 0px
         li
             float left
             border-right 1px solid gris9
             border-left 1px solid gris9
             position relative
             margin 0px 2px
+            padding 0px
             a
                 display block
                 height 45px
-                background-color #gris
+                background-color gris
                 color gris6
                 outline none
                 font-weight bold
@@ -134,21 +138,8 @@ body
                 padding 0px 20px
                 border-right 1px solid white
                 border-left 1px solid white
-                background #gris2
-                background -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.09, rgb(240,240,240)),
-        color-stop(0.55, rgb(227,227,227)),
-        color-stop(0.78, rgb(240,240,240))
-        )
-                background -moz-linear-gradient(
-        center bottom,
-        rgb(240,240,240) 9%,
-        rgb(227,227,227) 55%,
-        rgb(240,240,240) 78%
-        )
+                background gris2
+                background linear-gradient(linear,left bottom,left top,color-stop(0.09, rgb(240,240,240)),color-stop(0.55, rgb(227,227,227))color-stop(0.78, rgb(240,240,240)))
 
 #navigation ul li a:hover,
 #navigation ul li.selected a
