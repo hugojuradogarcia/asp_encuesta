@@ -2,15 +2,14 @@
 
 require_once('db_abstract_model.php'); 
 
-class Comments extends DbAbstractModel{
+class PersonalData extends DbAbstractModel{
 
-	public 	$rows_dimension_comments 	= array();
-	public 	$rowComments = 0;
+	public 	$rows_dimension_personal_data 	= array();
 
 	
 	function __construct()
 	{
-		$this->db_name = 'YallaYa_Exercise';
+		$this->db_name = 'aspen_encuestas';
 	}
 
 	function __destruct()
@@ -19,6 +18,7 @@ class Comments extends DbAbstractModel{
 	}
 
 	// SELECT COMMENTS
+	/*
 	public function getComments( $idArticles ){
 		$this->query = "
 				SELECT		*
@@ -42,21 +42,22 @@ class Comments extends DbAbstractModel{
 				$i ++;
 			endwhile;
 		endif;
-	}
+	}*/
 
 	// INSERT COMMENTS
-	public function setComments( $comments_data = array() )
+	public function setPersonalData( $personal_data = array() )
 	{
 			
-		foreach ( $comments_data as $campo=>$valor ):
+		foreach ( $personal_data as $campo=>$valor ):
 			$$campo = $valor;
 		endforeach;
 
 		$this->query = "
-			INSERT INTO 	Comments
-			( TitleComments, TextComments, NameComments, EmailComments, DateComments, Articles_idArticles )
-			VALUES 
-			( '$TitleComments', '$TextComments', '$NameComments', '$EmailComments', '$DateComments', '$Articles_idArticles')";
+						INSERT INTO 	aspen_empleados
+						( asp_puesto , asp_ingreso , asp_edad , asp_date )
+						VALUES 
+						( '$asp_puesto', '$asp_ingreso', '$asp_edad', '$asp_date' )
+						";
 		$this->execute_single_query();
 
 	}

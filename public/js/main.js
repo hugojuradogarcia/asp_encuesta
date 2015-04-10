@@ -143,6 +143,233 @@ $(document).ready(function() {
 	});
 });
 
+/*-------------------------------------------------------------------*/
+// DATOS PERSONALES
+$(document).ready(function(){
+	$('#input_visa').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_visa_opciones').slideDown('slow');
+					}
+		else $('.input_visa_opciones').slideUp('slow');
 
-       
+	});
 
+});
+
+
+// INFORMACION GENERAL
+$(document).ready(function(){
+	$('#input_trabaja_conyuge').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_percepcion_conyuge').slideDown('slow');
+					}
+		else $('.input_percepcion_conyuge').slideUp('slow');
+
+	});
+	
+	$('#input_trabaja_hijos').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_percepcion_hijos').slideDown('slow');
+					}
+		else $('.input_percepcion_hijos').slideUp('slow');
+
+	});
+
+});
+
+//EDUCACION
+$(document).ready(function(){
+	//BACHILLERATO
+	$('#input_bachillerato').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_bachillerato_tiempo').slideDown('slow');
+					}
+		else $('.input_bachillerato_tiempo').slideUp('slow');
+
+	});
+	//UNIVERSIDAD
+	$('#input_universidad').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_universidad_tiempo').slideDown('slow');
+					}
+		else $('.input_universidad_tiempo').slideUp('slow');
+
+	});
+	//MAESTRIA
+	$('#input_maestria').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_maestria_tiempo').slideDown('slow');
+					}
+		else $('.input_maestria_tiempo').slideUp('slow');
+
+	});
+	//ESPECIALIDAD
+	$('#input_especialidad').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_especialidad_tiempo').slideDown('slow');
+					}
+		else $('.input_especialidad_tiempo').slideUp('slow');
+
+	});
+	//DIPLOMADO
+	$('#input_diplomado').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_diplomado_tiempo').slideDown('slow');
+					}
+		else $('.input_diplomado_tiempo').slideUp('slow');
+
+	});
+	//DOCTORADO
+	$('#input_doctorado').change(function(){
+		
+		if ( $(this).val() != 'NO' ){
+			$('.input_doctorado_tiempo').slideDown('slow');
+					}
+		else $('.input_doctorado_tiempo').slideUp('slow');
+
+	});
+
+});
+// EGRESOS/INGRESOS
+$(document).ready(function(){
+	//TELEFONO
+	$('#input_egresos_telefono').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_egresos_telefono_monto').slideDown('slow');
+					}
+		else $('.input_egresos_telefono_monto').slideUp('slow');
+
+	});
+	//TELEFONO MOVIL
+	$('#input_egresos_movil').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_egresos_movil').slideDown('slow');
+					}
+		else $('.input_egresos_movil').slideUp('slow');
+
+	});
+	//GAS
+	$('#input_egresos_gas').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_egresos_gas_monto').slideDown('slow');
+					}
+		else $('.input_egresos_gas_monto').slideUp('slow');
+
+	});
+	//PREDIAL Y AGUA
+	$('#input_egresos_predial').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_egresos_predial_monto').slideDown('slow');
+					}
+		else $('.input_egresos_predial_monto').slideUp('slow');
+
+	});
+	//MANTENIMIENTO AUTOMOVIL
+	$('#input_egresos_mantenimiento_automovil').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_egresos_automovil_monto').slideDown('slow');
+					}
+		else $('.input_egresos_automovil_monto').slideUp('slow');
+
+	});
+	/*---------------------------ADEUDOS--------------------------*/
+	//ADEUDO TARJETAS
+	$('#input_adeudos_tarjetas').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_adeudos_tarjetas_monto').slideDown('slow');
+					}
+		else $('.input_adeudos_tarjetas_monto').slideUp('slow');
+
+	});
+	//ADEUDO PRESTAMOS
+	$('#input_adeudos_colegiaturas').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_adeudos_colegiaturas_monto').slideDown('slow');
+					}
+		else $('.input_adeudos_colegiaturas_monto').slideUp('slow');
+
+	});
+	//ADEUDO AUTOMOVIL PROPIO
+	$('#input_adeudos_automovil').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_adeudos_automovil_monto').slideDown('slow');
+					}
+		else $('.input_adeudos_automovil_monto').slideUp('slow');
+
+	});
+});
+
+// INVERSIONES
+$(document).ready(function(){
+	//INVERSION EDUCACION
+	$('#input_inversion_educacion').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_educacion_monto').slideDown('slow');
+					}
+		else $('.input_inversion_educacion_monto').slideUp('slow');
+
+	});
+	//INVERSION VESTUARIO
+	$('#input_inversion_vestuario').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_vestuario_monto').slideDown('slow');
+					}
+		else $('.input_inversion_vestuario_monto').slideUp('slow');
+
+	});
+	//INVERSION ALIMENTOS
+	$('#input_inversion_alimentos').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_alimentos_monto').slideDown('slow');
+					}
+		else $('.input_inversion_alimentos_monto').slideUp('slow');
+
+	});
+	//INVERSION INVERSIONES
+	$('#input_inversion_inversiones').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_inversiones_monto').slideDown('slow');
+					}
+		else $('.input_inversion_inversiones_monto').slideUp('slow');
+
+	});
+	//INVERSION ACTIVIDADES RECREATIVAS
+	$('#input_inversion_actividades').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_actividades_monto').slideDown('slow');
+					}
+		else $('.input_inversion_actividades_monto').slideUp('slow');
+
+	});
+	//INVERSION DEGUSROS DE VIDA
+	$('#input_inversion_seguros').change(function(){
+		
+		if ( $(this).val() == 'SI' ){
+			$('.input_inversion_seguros_monto').slideDown('slow');
+					}
+		else $('.input_inversion_seguros_monto').slideUp('slow');
+
+	});
+
+});

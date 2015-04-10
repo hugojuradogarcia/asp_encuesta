@@ -57,11 +57,11 @@
                         <a href="#">Educaci&oacute;n</a>
                     </li>
                     <li>
-                        <a href="#">Egresos</a>
+                        <a href="#">Egresos/Ingresos</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#">Inversiones</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="#">Activos</a>
                     </li>
@@ -103,6 +103,30 @@
                             <label for="input_date">Registro:</label>
                             <input id="input_date" name="input_date" type="date" value="<?php echo date('Y-m-d') ?>" readonly="readonly"/>
                         </div>
+                        
+                        <div class="form-input">
+                            <label for="input_pasaporte">Pasaporte:</label>
+                            <select class="select" id="input_pasaporte" name="input_pasaporte">
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                            </select>
+                        </div>
+
+                        <div class="form-input">
+                            <label for="input_visa">Visa:</label>
+                            <select class="select" id="input_visa" name="input_visa">
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                            </select>
+
+                            <label class="input_visa_opciones" for="input_visa_opciones">Seleccione cuales:</label>
+                            <select class="input_visa_opciones" multiple class="select" id="input_visa_opciones" name="input_visa_opciones">
+                                    <option value="AUSTRALIA">AUSTRALIA</option>
+                                    <option value="CANADA">CANADÁ</option>
+                                    <option value="CHINA">CHINA</option>
+                                    <option value="SI">ESTADOS UNIDOS DE AMERICA</option>
+                            </select>
+                        </div>  
 
                     </fieldset>
                     
@@ -113,21 +137,21 @@
                         <div class="form-input">
                             <label for="input_inmueble">Inmueble:</label>
                             <select class="select" id="input_inmueble" name="input_inmueble">
-                                <option>PROPIO</option>
-                                <option>RENTADO</option>
-                                <option>PRESTADO</option>
-                                <option>COMPARTIDO</option>
+                                <option value="PROPIO">PROPIO</option>
+                                <option value="RENTADO">RENTADO</option>
+                                <option value="PRESTADO">PRESTADO</option>
+                                <option value="COMPARTIDO">COMPARTIDO</option>
                             </select>
                         </div>
                         
                         <div class="form-input">
                             <label for="input_edo_civil">Estado civil:</label>
                             <select class="select" id="input_edo_civil" name="input_edo_civil">
-                                <option>SOLTERO(A)</option>
-                                <option>CASADO(A)</option>
-                                <option>VIUDO(A)</option>
-                                <option>UNI&Oacute;N LIBRE</option>
-                                <option>DIVORCIADO(A)</option>
+                                <option value="SOLTERO(A)">SOLTERO(A)</option>
+                                <option value="CASADO(A)">CASADO(A)</option>
+                                <option value="VIUDO(A)">VIUDO(A)</option>
+                                <option value="UNION LIBRE">UNI&Oacute;N LIBRE</option>
+                                <option value="DIVORCIADO(A)">DIVORCIADO(A)</option>
                             </select>
                         </div>  
 
@@ -149,8 +173,8 @@
                             <label for="input_edad_padres">Padres:</label>
                             <input id="input_edad_padres" name="input_edad_padres" type="number" />
                         
-                            <label for="input_edad_otros">Otros:</label>
-                            <input id="input_edad_otros" name="input_edad_otros" type="number" />
+                            <label for="input_edad_nietos">Nietos:</label>
+                            <input id="input_edad_nietos" name="input_edad_nietos" type="number" />
                         </div> 
 
                         <div class="form-input">
@@ -158,24 +182,34 @@
 
                             <label for="input_trabaja_conyuge">Conyuge:</label>
                             <select class="select" id="input_trabaja_conyuge" name="input_trabaja_conyuge">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
+                            </select>
+                            
+                            <label class="input_percepcion_conyuge" for="input_percepcion_conyuge">Percepci&oacute;n:</label>
+                            <input class="input_percepcion_conyuge" id="input_percepcion_conyuge" name="input_percepcion_conyuge" type="number" />
+
+                            <label for="input_trabaja_hijos">Hijos:</label>
+                            <select class="select" id="input_trabaja_hijos" name="input_trabaja_hijos">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
 
-                            <label for="input_percepcion_conyuge">Percepci&oacute;n:</label>
-                            <input id="input_percepcion_conyuge" name="input_percepcion_conyuge" type="number" />
-
-                            <label for="input_trabaja_conyuge">Hijos:</label>
-                            <select class="select" id="input_trabaja_conyuge" name="input_trabaja_conyuge">
-                                <option>SI</option>
-                                <option>NO</option>
-                            </select>
-
-                            <label for="input_percepcion_hijos">Percepci&oacute;n:</label>
-                            <input id="input_percepcion_hijos" name="input_percepcion_hijos" type="number" />
+                            <label class="input_percepcion_hijos" for="input_percepcion_hijos">Percepci&oacute;n:</label>
+                            <input class="input_percepcion_hijos" id="input_percepcion_hijos" name="input_percepcion_hijos" type="number" />
 
                         </div>   
                         
+                        <div class="form-input">
+                            <h4>Ingresos familiares:</h4>
+                        
+
+                            <label class="input_ingresos_aspen" for="input_ingresos_aspen">Aspen:</label>
+                            <input class="input_ingresos_aspen" id="input_ingresos_aspen" name="input_ingresos_aspen" type="number" />
+
+                            <label class="input_ingresos_otros" for="input_ingresos_otros">Otros:</label>
+                            <input class="input_ingresos_otros" id="input_ingresos_otros" name="input_ingresos_otros" type="number" />
+                        </div>
                     </fieldset>
                     
                     <!--EDUCACION-->
@@ -186,18 +220,13 @@
 
                                 <label for="input_bachillerato">Bachillerato:</label>
                                 <select class="select" id="input_bachillerato" name="input_bachillerato">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_bachillerato_concluido">Concluido:</label>
-                                <select class="select" id="input_bachillerato_concluido" name="input_bachillerato_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
                                 
-                                <label for="input_bachillerato_tiempo">Tiempo:</label>
-                                <input class="select" id="input_bachillerato_tiempo" name="input_bachillerato_tiempo"/>
+                                <label class="input_bachillerato_tiempo" for="input_bachillerato_tiempo">Tiempo:</label>
+                                <input class="input_bachillerato_tiempo" id="input_bachillerato_tiempo" name="input_bachillerato_tiempo"/>
 
                             </div>
                             
@@ -205,18 +234,13 @@
 
                                 <label for="input_universidad">Universidad:</label>
                                 <select class="select" id="input_universidad" name="input_universidad">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
 
-                                <label for="input_universidad_concluido">Concluido:</label>
-                                <select class="select" id="input_universidad_concluido" name="input_universidad_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_universidad_tiempo">Tiempo:</label>
-                                <input class="select" id="input_universidad_tiempo" name="input_universidad_tiempo"/>
+                                <label class="input_universidad_tiempo" for="input_universidad_tiempo">Tiempo:</label>
+                                <input class="input_universidad_tiempo" id="input_universidad_tiempo" name="input_universidad_tiempo"/>
 
                             </div>
                             
@@ -224,18 +248,13 @@
 
                                 <label for="input_maestria">Maestría:</label>
                                 <select class="select" id="input_maestria" name="input_maestria">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
 
-                                <label for="input_maestria_concluido">Concluido:</label>
-                                <select class="select" id="input_maestria_concluido" name="input_maestria_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_maestria_tiempo">Tiempo:</label>
-                                <input class="select" id="input_maestria_tiempo" name="input_maestria_tiempo"/>
+                                <label class="input_maestria_tiempo" for="input_maestria_tiempo">Tiempo:</label>
+                                <input class="input_maestria_tiempo" id="input_maestria_tiempo" name="input_maestria_tiempo"/>
 
                             </div>
                             
@@ -243,105 +262,104 @@
 
                                 <label for="input_especialidad">Especialidad:</label>
                                 <select class="select" id="input_especialidad" name="input_especialidad">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
 
-                                <label for="input_especialidad_concluido">Concluido:</label>
-                                <select class="select" id="input_especialidad_concluido" name="input_especialidad_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_especialidad_tiempo">Tiempo:</label>
-                                <input class="select" id="input_especialidad_tiempo" name="input_especialidad_tiempo"/>
+                                <label class="input_especialidad_tiempo" for="input_especialidad_tiempo">Tiempo:</label>
+                                <input class="input_especialidad_tiempo" id="input_especialidad_tiempo" name="input_especialidad_tiempo"/>
 
                             </div>
                             
                             <div class="form-input">
 
-                                <label for="input_diplomado_tiempo">Diplomado:</label>
+                                <label for="input_diplomado">Diplomado:</label>
                                 <select class="select" id="input_diplomado" name="input_diplomado">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
 
-                                <label for="input_diplomado_concluido">Concluido:</label>
-                                <select class="select" id="input_diplomado_concluido" name="input_diplomado_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_diplomado_tiempo">Tiempo:</label>
-                                <input class="select" id="input_diplomado_tiempo" name="input_diplomado_tiempo"/>
+                                <label class="input_diplomado_tiempo" for="input_diplomado_tiempo">Tiempo:</label>
+                                <input class="input_diplomado_tiempo" id="input_diplomado_tiempo" name="input_diplomado_tiempo"/>
 
                             </div>
                             
                             <div class="form-input">
 
-                                <label for="input_trabaja_conyuge">Doctorado:</label>
+                                <label for="input_doctorado">Doctorado:</label>
                                 <select class="select" id="input_doctorado" name="input_doctorado">
-                                    <option>SI</option>
-                                    <option>NO</option>
-                                </select>
-
-                                <label for="input_doctorado_concluido">Concluido:</label>
-                                <select class="select" id="input_doctorado_concluido" name="input_doctorado_concluido">
-                                    <option>SI</option>
-                                    <option>NO</option>
+                                    <option value="NO">NO</option>
+                                    <option value="SI">SI</option>
+                                    <option value="TRUNCO">TRUNCO</option>
                                 </select>
                                 
-                                <label for="input_doctorado_tiempo">Tiempo:</label>
-                                <input class="select" id="input_doctorado_tiempo" name="input_doctorado_tiempo"/>
+                                <label class="input_doctorado_tiempo" for="input_doctorado_tiempo">Tiempo:</label>
+                                <input class="input_doctorado_tiempo" id="input_doctorado_tiempo" name="input_doctorado_tiempo"/>
 
                             </div>
 
                     </fieldset>
                     
-                    <!--EGRESOS-->
+                    <!--EGRESOS/INGRESOS-->
                     <fieldset class="step">
-                        <legend>Egresos</legend>
+                        <legend>Egresos/Ingresos</legend>
                         
                         
                         <div class="form-input">
 
                             <h4>Servicios domesticos:</h4>
 
-                            <label for="input_egresos_luz">Luz:</label>
-                            <select class="select" id="input_egresos_luz" name="input_egresos_luz">
-                                <option>SI</option>
-                                <option>NO</option>
-                            </select>
-
                             <label for="input_egresos_telefono">Tel&eacute;fono:</label>
                             <select class="select" id="input_egresos_telefono" name="input_egresos_telefono">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_egresos_telefono_monto" for="input_egresos_telefono_monto">Monto:</label>
+                            <input class="input_egresos_telefono_monto" id="input_egresos_telefono_monto" name="input_egresos_telefono_monto"/>
+
 
                             <label for="input_egresos_movil">Tel&eacute;fono m&oacute;vil:</label>
                             <select class="select" id="input_egresos_movil" name="input_egresos_movil">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_egresos_movil" for="input_egresos_movil_monto">Monto:</label>
+                            <input class="input_egresos_movil" id="input_egresos_movil_monto" name="input_egresos_movil_monto"/>
+
 
                             <label for="input_egresos_gas">Gas:</label>
                             <select class="select" id="input_egresos_gas" name="input_egresos_gas">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_egresos_gas_monto" for="input_egresos_gas_monto">Monto:</label>
+                            <input class="input_egresos_gas_monto" id="input_egresos_gas_monto" name="input_egresos_gas_monto"/>
+
 
                             <label for="input_egresos_predial">Predial y agua:</label>
                             <select class="select" id="input_egresos_predial" name="input_egresos_predial">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
 
-                            <label for="input_egresos_mantenimiento_carro">Mantenimiento de carro:</label>
-                            <select class="select" id="input_egresos_mantenimiento_carro" name="input_egresos_mantenimiento_carro">
-                                <option>SI</option>
-                                <option>NO</option>
+                            <label class="input_egresos_predial_monto" for="input_egresos_predial_monto">Monto:</label>
+                            <input class="input_egresos_predial_monto" id="input_egresos_predial_monto" name="input_egresos_predial_monto"/>
+
+
+                            <label for="input_egresos_mantenimiento_automovil">Mantenimiento de carro:</label>
+                            <select class="select" id="input_egresos_mantenimiento_automovil" name="input_egresos_mantenimiento_automovil">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_egresos_automovil_monto" for="input_egresos_automovil_monto">Monto:</label>
+                            <input class="input_egresos_automovil_monto" id="input_egresos_automovil_monto" name="input_egresos_automovil_monto"/>
+
                         </div>
                         
                         
@@ -353,77 +371,143 @@
                             
                             <label for="input_adeudos_tarjetas">Tarjetas de cr&eacute;dito:</label>
                             <select class="select" id="input_adeudos_tarjetas" name="input_adeudos_tarjetas">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
 
-                            <label for="input_adeudos_prestamos">Pr&eacute;stamos personales:</label>
-                            <select class="select" id="input_adeudos_prestamos" name="input_adeudos_prestamos">
-                                <option>SI</option>
-                                <option>NO</option>
+                            <label class="input_adeudos_tarjetas_monto" for="input_adeudos_tarjetas_monto">Monto:</label>
+                            <input class="input_adeudos_tarjetas_monto" id="input_adeudos_tarjetas_monto" name="input_adeudos_tarjetas_monto"/>
+
+
+                            <label for="input_adeudos_colegiaturas">Pago de colegiaturas:</label>
+                            <select class="select" id="input_adeudos_colegiaturas" name="input_adeudos_colegiaturas">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_adeudos_colegiaturas_monto" for="input_adeudos_colegiaturas_monto">Monto:</label>
+                            <input class="input_adeudos_colegiaturas_monto" id="input_adeudos_colegiaturas_monto" name="input_adeudos_prestamos_monto"/>
+
 
                             <label for="input_adeudos_automovil">Autom&oacute;vil propio:</label>
                             <select class="select" id="input_adeudos_automovil" name="input_adeudos_automovil">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_adeudos_automovil_monto" for="input_adeudos_automovil_monto">Monto:</label>
+                            <input class="input_adeudos_automovil_monto" id="input_adeudos_automovil_monto" name="input_adeudos_automovil_monto"/>
+                            
+                            <label for="input_adeudos_ahorro">¿Cuentas con ahorro?</label>
+                            <select class="select" id="input_adeudos_ahorro" name="input_adeudos_ahorro">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
+                            </select>
+
+
                         </div>  
+                        
+                        <div class="form-input">
+                            <label class="input_adeudos_mesuales" for="input_adeudos_mesuales">Gasto mensual total:</label>
+                            <input type="number" class="input_adeudos_mesuales" id="input_adeudos_mesuales" name="input_adeudos_mesuales"/>
+                        </div>
+
+                        <div class="form-input">
+
+                            <label for="input_ingresos_extra">Tienes otros ingresos adicionales a Aspen:</label>
+                            <select class="select" id="input_ingresos_extra" name="input_ingresos_extra">
+                                <option value="NO">NO</option>
+                                <option value="SI">DE $1000 A $5000</option>
+                                <option value="SI">DE $5000 A $10000</option>
+                                <option value="SI">M&Aacute;S DE $10000</option>
+                            </select>
+                            
+                        </div>
 
                     </fieldset>
 
-                    <fieldset class="step">
+                    <!--<fieldset class="step">
                         <legend>Inversiones</legend>
                                          
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Gastos de Educación:</label>
-                            <select class="select" id="input_gastos" name="input_gastos">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_educacion">Gastos de Educación:</label>
+                            <select class="select" id="input_inversion_educacion" name="input_inversion_educacion">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_educacion_monto" for="input_inversion_educacion_monto">Monto:</label>
+                            <input class="input_inversion_educacion_monto" id="input_inversion_educacion_monto" name="input_inversion_educacion_monto"/>
+
                         </div>
 
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Vestuario:</label>
-                            <select class="select" id="input_vestuario" name="input_vestuario">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_vestuario">Vestuario:</label>
+                            <select class="select" id="input_inversion_vestuario" name="input_inversion_vestuario">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_vestuario_monto" for="input_inversion_vestuario_monto">Monto:</label>
+                            <inpuT class="input_inversion_vestuario_monto" id="input_inversion_vestuario_monto" name="input_inversion_vestuario_monto"/>
+
                         </div>
 
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Alimentos:</label>
-                            <select class="select" id="input_alimentos" name="input_alimentos">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_alimentos">Alimentos:</label>
+                            <select class="select" id="input_inversion_alimentos" name="input_inversion_alimentos">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_alimentos_monto" for="input_inversion_alimentos_monto">Monto:</label>
+                            <input class="input_inversion_alimentos_monto" id="input_inversion_alimentos_monto" name="input_inversion_alimentos_monto"/>
+
                         </div>
 
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Inversiones:</label>
-                            <select class="select" id="input_inversiones" name="input_inversiones">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_inversiones">Inversiones:</label>
+                            <select class="select" id="input_inversion_inversiones" name="input_inversion_inversiones">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_inversiones_monto" for="input_inversion_inversiones_monto">Monto:</label>
+                            <input class="input_inversion_inversiones_monto" id="input_inversion_inversiones_monto" name="input_inversion_inversiones_monto"/>
+
                         </div>
 
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Actividades:</label>
-                            <select class="select" id="input_actividades" name="input_actividades">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_actividades">Actividades recreativas:</label>
+                            <select class="select" id="input_inversion_actividades" name="input_inversion_actividades">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_actividades_monto" for="input_inversion_actividades_monto">Monto:</label>
+                            <input class="input_inversion_actividades_monto" id="input_inversion_actividades_monto" name="input_inversion_actividades_monto"/>
+
                         </div>
 
                         <div class="form-input">
-                            <label for="input_trabaja_conyuge">Seguros de Vida:</label>
-                            <select class="select" id="input_seguros" name="input_seguros">
-                                <option>SI</option>
-                                <option>NO</option>
+
+                            <label for="input_inversion_seguros">Seguros de Vida:</label>
+                            <select class="select" id="input_inversion_seguros" name="input_inversion_seguros">
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
+
+                            <label class="input_inversion_seguros_monto" for="input_inversion_seguros_monto">Monto:</label>
+                            <input class="input_inversion_seguros_monto" id="input_inversion_seguros_monto" name="input_inversion_seguros_monto"/>
+
                         </div>
 
-                    </fieldset>
+                    </fieldset>-->
 
                     <fieldset class="step">
                         <legend>Activos</legend>
@@ -431,22 +515,22 @@
                         <div class="form-input">
                             <label for="input_trabaja_conyuge">Computadora:</label>
                             <select class="select" id="input_computadora" name="input_computadora">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
                         </div>
                         <div class="form-input">
                             <label for="input_trabaja_conyuge">Teléfono móvil:</label>
                             <select class="select" id="input_movil" name="input_movil">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
                         </div>
                         <div class="form-input">
                             <label for="input_trabaja_conyuge">Automóviles:</label>
                             <select class="select" id="input_auto" name="input_auto">
-                                <option>SI</option>
-                                <option>NO</option>
+                                <option value="NO">NO</option>
+                                <option value="SI">SI</option>
                             </select>
                         </div>
 

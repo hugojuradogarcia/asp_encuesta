@@ -81,7 +81,9 @@ h1
                 background none
                 border none
                 box-shadow none
-	        input
+	        select
+                width 50%      
+            input
                 width 50%   
 	            &:focus
                     background-color white
@@ -179,3 +181,38 @@ span
     width 200px
     float left
 
+.input_visa_opciones , .input_percepcion_conyuge, .input_percepcion_hijos 
+    display none
+// EDUCACION
+.input_bachillerato_tiempo, .input_universidad_tiempo, .input_maestria_tiempo, .input_especialidad_tiempo, .input_diplomado_tiempo, .input_doctorado_tiempo
+    display none
+//EGRESOS
+.input_egresos_telefono_monto, .input_egresos_movil, .input_egresos_gas_monto, .input_egresos_predial_monto, .input_egresos_automovil_monto, .input_adeudos_tarjetas_monto, .input_adeudos_colegiaturas_monto, .input_adeudos_automovil_monto
+    display none
+//INVERSIONES
+.input_inversion_educacion_monto, .input_inversion_vestuario_monto, .input_inversion_alimentos_monto, .input_inversion_inversiones_monto, .input_inversion_actividades_monto, .input_inversion_seguros_monto 
+    display none    
+
+//ANIMATE
+.stretchRight
+    animation-name stretchRight
+    animation-duration 2s
+    animation-timing-function ease-out
+    transform-origin 0% 0%
+
+
+@keyframes stretchRight
+    0%
+        transform scaleX(.3)
+    40%
+        transform scaleX(1.02)
+    60%
+        transform scaleX(.98)
+    80%
+        transform scaleX(1.01)
+    100%
+        transform scaleX(.98)
+    90%
+        transform scaleX(1.01)
+    100%
+        transform scaleX(1)

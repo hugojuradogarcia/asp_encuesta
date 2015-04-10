@@ -5,8 +5,8 @@ abstract class DBAbstractModel
 
 	private static 	$db_host = 'localhost'; 
 	private static 	$db_user = 'root';
-	private static 	$db_pass = 'Ciracus1988'; 
-	protected 		$db_name = 'YallaYa_Exercise'; 
+	private static 	$db_pass = ''; 
+	protected 		$db_name = 'aspen_encuestas'; 
 	
 	protected 	$query; 
 	protected 	$rows = array(); 
