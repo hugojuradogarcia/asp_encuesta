@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 		var error = 1;
 		var hasError = false;
-		$('#form_survey').children(':nth-child('+ parseInt(step) +')').find(':input:not(button)').each(function(){
+		$('#form_survey').children(':nth-child('+ parseInt(step) +')').find(':input:not(:button, :hidden)').each(function(){
 			var $this 		= $(this);
 			var valueLength = jQuery.trim($this.val()).length;
 
@@ -137,7 +137,7 @@ $(document).ready(function() {
 	*/
 	$('#registerButton').bind('click',function(){
 		if($('#form_survey').data('errors')){
-			alert('Please correct the errors in the Form');
+			alert('Por favor, corrija los errores en el formulario');
 			return false;
 		}
 	});
@@ -280,9 +280,9 @@ $(document).ready(function(){
 	$('#input_egresos_mantenimiento_automovil').change(function(){
 		
 		if ( $(this).val() == 'SI' ){
-			$('.input_egresos_automovil_monto').slideDown('slow');
+			$('.input_egresos_mantenimiento_automovil_monto').slideDown('slow');
 					}
-		else $('.input_egresos_automovil_monto').slideUp('slow');
+		else $('.input_egresos_mantenimiento_automovil_monto').slideUp('slow');
 
 	});
 	/*---------------------------ADEUDOS--------------------------*/
@@ -373,3 +373,35 @@ $(document).ready(function(){
 	});
 
 });
+
+
+//INPUT TYPE NUMBER 
+$(document).ready(function(){
+	$('#form_survey').submit(function(){
+		if( $("input[type='number']").length == 0 ){
+			$("input[type='number']").val('0');
+		};
+	});
+});
+
+
+jQuery.validator.addMethod("lettersonly", function(value, element) {
+  return this.optional(element) || /^[a-z, " "]+$/i.test(value);
+}, "Unicamente letras"); 
+
+
+// JQUERY validation
+$(document).ready(function(){
+	$('#form_survey').validate({
+		
+		rules: {
+			input_nombre: { required: true, minlength: 5, maxlength: 60, lettersonly: true},
+			input_puesto: { required: true, minlength: 5, maxlength: 60, lettersonly: true},
+			input_ingreso:{ required: true},
+			input_edad: { required: true, min: 18, max: 110, digits: true }
+		},
+		erroElement: 'div'
+
+	});
+});
+

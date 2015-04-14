@@ -2,9 +2,9 @@
 
 require_once('db_abstract_model.php'); 
 
-class PersonalData extends DbAbstractModel{
+class Assets extends DbAbstractModel{
 
-	public 	$rows_dimension_personal_data 	= array();
+	public 	$rows_dimension_assets 	= array();
 
 	
 	function __construct()
@@ -19,11 +19,11 @@ class PersonalData extends DbAbstractModel{
 
 	// SELECT COMMENTS
 	/*
-	public function getComments( $idArticles ){
+	public function getPersonalData( $asp_nombre ){
 		$this->query = "
 				SELECT		*
-				FROM 		Comments
-				WHERE 		Articles_idArticles = '$idArticles'
+				FROM 		aspen_encuestas
+				WHERE 		asp_nombre = '$asp_nombre'
 			";
 		$this->get_results_from_query();
 		$this->rowComments = count( $this->rows);
@@ -45,19 +45,21 @@ class PersonalData extends DbAbstractModel{
 	}*/
 
 	// INSERT COMMENTS
-	public function setPersonalData( $personal_data = array() )
+	public function setAssets( $assets_data = array() )
 	{
 			
-		foreach ( $personal_data as $campo=>$valor ):
+		foreach ( $assets_data as $campo=>$valor ):
 			$$campo = $valor;
 		endforeach;
 
 		$this->query = "
-						INSERT INTO 	aspen_empleados
-						( asp_puesto , asp_ingreso , asp_edad , asp_date )
+						INSERT INTO 	aspen_activos
+						( asp_compu , asp_telefono , asp_auto ,
+						  aspen_empleados_asp_idempleado )
 						VALUES 
-						( '$asp_puesto', '$asp_ingreso', '$asp_edad', '$asp_date' )
-						";
+						( '$asp_compu' , '$asp_telefono' , '$asp_auto' ,
+						  '$aspen_empleados_asp_idempleado' )
+						 ";
 		$this->execute_single_query();
 
 	}

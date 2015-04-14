@@ -119,8 +119,8 @@
                                     <option value="SI">SI</option>
                             </select>
 
-                            <label class="input_visa_opciones" for="input_visa_opciones">Seleccione cuales:</label>
-                            <select class="input_visa_opciones" multiple class="select" id="input_visa_opciones" name="input_visa_opciones">
+                            <label class="input_visa_opciones" for="input_visa_paises">Seleccione cuales:</label>
+                            <select class="input_visa_opciones" multiple class="select" id="input_visa_paises" name="input_visa_paises">
                                     <option value="AUSTRALIA">AUSTRALIA</option>
                                     <option value="CANADA">CANADÁ</option>
                                     <option value="CHINA">CHINA</option>
@@ -357,8 +357,8 @@
                                 <option value="SI">SI</option>
                             </select>
 
-                            <label class="input_egresos_automovil_monto" for="input_egresos_automovil_monto">Monto:</label>
-                            <input class="input_egresos_automovil_monto" id="input_egresos_automovil_monto" name="input_egresos_automovil_monto"/>
+                            <label class="input_egresos_mantenimiento_automovil_monto" for="input_egresos_mantenimiento_automovil_monto">Monto:</label>
+                            <input class="input_egresos_mantenimiento_automovil_monto" id="input_egresos_mantenimiento_automovil_monto" name="input_egresos_mantenimiento_automovil_monto"/>
 
                         </div>
                         
@@ -560,7 +560,8 @@
 	
 	<!--JQUERY-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	
+	<!--JQUERY VALIDATOR-->
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/picker.js"></script>
     <script src="js/picker.date.js"></script>
@@ -582,6 +583,9 @@
         // picker.set('disable', true);
         // });
     </script>
+
 	<script src="js/main.js"></script>
+
+
 </body>
 </html>
