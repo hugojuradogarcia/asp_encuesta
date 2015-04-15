@@ -17,6 +17,15 @@ $assets = new Assets();
 
 $asp_idempleado = $personaldata->getMaxId() + 1 ;
 
+// VISAS
+if ( isset( $_POST['input_visa_paises'] )) {
+	$input_visa_paises_array =  $_POST['input_visa_paises'] ; 
+	foreach ( $input_visa_paises_array as $value ) {
+		$input_visa_paises = $input_visa_paises . $value . ',';
+	}
+}
+
+
 	if ( isset($_POST['input_nombre'])  	&&
 		 isset($_POST['input_puesto']) 	&&
 		 isset($_POST['input_ingreso'])	&&
@@ -31,7 +40,7 @@ $asp_idempleado = $personaldata->getMaxId() + 1 ;
 			"asp_date"			=>	( $_POST['input_date'] ),
 			"asp_pasaporte"		=>	( $_POST['input_pasaporte'] ) ,
 			"asp_visa"			=>	( $_POST['input_visa'] ) , 
-			"asp_visa_paises"	=>	( $_POST['input_visa_paises'] )  
+			"asp_visa_paises"	=>	$input_visa_paises 
 		);
 
 		
@@ -119,3 +128,29 @@ $asp_idempleado = $personaldata->getMaxId() + 1 ;
 
 	endif;
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="refresh"  content="5; URL=index.php">
+	<title>Fin encuesta</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+
+	<div class="col-md-12 text-center">
+		<div class="jumbotron">
+			<?php if ( isset( $_POST['input_nombre'] ) ) { ?>
+			<h1><small><?php echo $_POST['input_nombre']; ?></small></h1>
+			<?php } ?>
+			<h1>Gracias por su participaci&oacute;n</h1><br>
+			<p><a href="index.php" class="btn btn-primary btn-lg" role="button">Regresar a la encuesta</a></p>
+		</div>
+	</div>
+	
+</body>
+</html>

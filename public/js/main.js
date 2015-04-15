@@ -108,7 +108,7 @@ $(document).ready(function() {
 
 		var error = 1;
 		var hasError = false;
-		$('#form_survey').children(':nth-child('+ parseInt(step) +')').find(':input:not(:button, :hidden)').each(function(){
+		$('#form_survey').children(':nth-child('+ parseInt(step) +')').find(':input:not(:button, :hidden )').each(function(){
 			var $this 		= $(this);
 			var valueLength = jQuery.trim($this.val()).length;
 
@@ -398,7 +398,33 @@ $(document).ready(function(){
 			input_nombre: { required: true, minlength: 5, maxlength: 60, lettersonly: true},
 			input_puesto: { required: true, minlength: 5, maxlength: 60, lettersonly: true},
 			input_ingreso:{ required: true},
-			input_edad: { required: true, min: 18, max: 110, digits: true }
+			input_edad: { required: true, min: 18, max: 110, digits: true },
+			
+
+			input_dep_economicos: { required: true, digits: true },
+			input_ingresos_aspen: { required: true, digits: true },
+			input_ingresos_otros: { required: true, digits: true },
+
+
+			input_bachillerato_tiempo: { digits: true },
+			input_universidad_tiempo: { digits: true },
+			input_maestria_tiempo: { digits: true },
+			input_especialidad_tiempo: { digits: true },
+			input_diplomado_tiempo: { digits: true },
+			input_doctorado_tiempo: { digits: true },
+
+
+			input_egresos_telefono_monto: { digits: true },
+			input_egresos_movil_monto: { digits: true },
+			input_egresos_gas_monto: { digits: true },
+			input_egresos_predial_monto: { digits: true },
+			input_egresos_mantenimiento_automovil_monto: { digits: true },
+
+			input_adeudos_tarjetas_monto: { digits: true },
+			input_adeudos_colegiaturas_monto: { digits: true },
+			input_adeudos_automovil_monto: { digits: true },
+			input_adeudos_mesuales: { digits: true }
+
 		},
 		erroElement: 'div'
 

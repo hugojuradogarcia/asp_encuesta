@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `aspen_encuestas`.`aspen_egresos` (
   `asp_ade_auto_monto` INT NULL,
   `asp_ade_ahorro` VARCHAR(10) NULL,
   `asp_gasto_mensual_monto` INT NULL,
-  `asp_ing_adicionales_monto` INT NULL,
+  `asp_ing_adicionales_monto` VARCHAR(50) NULL,
   `aspen_empleados_asp_idempleado` INT NOT NULL,
   INDEX `fk_aspen_egresos_aspen_empleados_idx` (`aspen_empleados_asp_idempleado` ASC),
   CONSTRAINT `fk_aspen_egresos_aspen_empleados`

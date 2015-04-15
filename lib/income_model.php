@@ -52,7 +52,7 @@ class Income extends DbAbstractModel{
 			$$campo = $valor;
 		endforeach;
 
-		echo $this->query = "
+		$this->query = "
 						INSERT INTO 	aspen_egresos
 						( asp_tel , asp_tel_monto , asp_movil , asp_movil_monto , asp_gas , asp_gas_monto , 
 						  asp_predial , asp_predial_monto , asp_mant_carro , asp_mant_carro_monto , asp_ade_tarj , asp_ade_tarj_monto,

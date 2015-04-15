@@ -336,7 +336,7 @@ $.extend( $.validator, {
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date ( ISO ).",
 		number: "Por favor ingresa un número válido.",
-		digits: "Please enter only digits.",
+		digits: "Introduzca sólo dígitos.",
 		creditcard: "Please enter a valid credit card number.",
 		equalTo: "Please enter the same value again.",
 		maxlength: $.validator.format( "Por favor ingrese no más de {0} caracteres." ),

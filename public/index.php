@@ -81,7 +81,7 @@
                         
                          <div class="form-input">
                             <label for="input_nombre">Nombre:</label>
-                            <input id="input_nombre" name="input_nombre" placeholder="Nombre Apellidos" type="text"/>
+                            <input id="input_nombre" name="input_nombre" placeholder="Nombre Apellidos" type="text" required/>
                         </div>
 
                         <div class="form-input">
@@ -120,11 +120,11 @@
                             </select>
 
                             <label class="input_visa_opciones" for="input_visa_paises">Seleccione cuales:</label>
-                            <select class="input_visa_opciones" multiple class="select" id="input_visa_paises" name="input_visa_paises">
+                            <select class="input_visa_opciones" multiple class="select" id="input_visa_paises" name="input_visa_paises[]">
                                     <option value="AUSTRALIA">AUSTRALIA</option>
                                     <option value="CANADA">CANADÁ</option>
                                     <option value="CHINA">CHINA</option>
-                                    <option value="SI">ESTADOS UNIDOS DE AMERICA</option>
+                                    <option value="ESTADOS UNIDOS DE AMERICA">ESTADOS UNIDOS DE AMERICA</option>
                             </select>
                         </div>  
 
@@ -165,16 +165,16 @@
                             <h4>Edades:</h4>
 
                             <label for="input_edad_conyuge">Conyuge:</label>
-                            <input id="input_edad_conyuge" name="input_edad_conyuge" type="number" />
+                            <input id="input_edad_conyuge" name="input_edad_conyuge" type="number" value="0"/>
                         
                             <label for="input_edad_hijos">Hijos:</label>
-                            <input id="input_edad_hijos" name="input_edad_hijos" type="number" />
+                            <input id="input_edad_hijos" name="input_edad_hijos" type="number" value="0"/>
                         
                             <label for="input_edad_padres">Padres:</label>
-                            <input id="input_edad_padres" name="input_edad_padres" type="number" />
+                            <input id="input_edad_padres" name="input_edad_padres" type="number" value="0"/>
                         
                             <label for="input_edad_nietos">Nietos:</label>
-                            <input id="input_edad_nietos" name="input_edad_nietos" type="number" />
+                            <input id="input_edad_nietos" name="input_edad_nietos" type="number" value="0"/>
                         </div> 
 
                         <div class="form-input">
@@ -226,7 +226,7 @@
                                 </select>
                                 
                                 <label class="input_bachillerato_tiempo" for="input_bachillerato_tiempo">Tiempo:</label>
-                                <input class="input_bachillerato_tiempo" id="input_bachillerato_tiempo" name="input_bachillerato_tiempo"/>
+                                <input class="input_bachillerato_tiempo" id="input_bachillerato_tiempo" name="input_bachillerato_tiempo" placeholder="años"/>
 
                             </div>
                             
@@ -240,7 +240,7 @@
                                 </select>
 
                                 <label class="input_universidad_tiempo" for="input_universidad_tiempo">Tiempo:</label>
-                                <input class="input_universidad_tiempo" id="input_universidad_tiempo" name="input_universidad_tiempo"/>
+                                <input class="input_universidad_tiempo" id="input_universidad_tiempo" name="input_universidad_tiempo" placeholder="años"/>
 
                             </div>
                             
@@ -254,7 +254,7 @@
                                 </select>
 
                                 <label class="input_maestria_tiempo" for="input_maestria_tiempo">Tiempo:</label>
-                                <input class="input_maestria_tiempo" id="input_maestria_tiempo" name="input_maestria_tiempo"/>
+                                <input class="input_maestria_tiempo" id="input_maestria_tiempo" name="input_maestria_tiempo" placeholder="años"/>
 
                             </div>
                             
@@ -268,7 +268,7 @@
                                 </select>
 
                                 <label class="input_especialidad_tiempo" for="input_especialidad_tiempo">Tiempo:</label>
-                                <input class="input_especialidad_tiempo" id="input_especialidad_tiempo" name="input_especialidad_tiempo"/>
+                                <input class="input_especialidad_tiempo" id="input_especialidad_tiempo" name="input_especialidad_tiempo" placeholder="años"/>
 
                             </div>
                             
@@ -282,7 +282,7 @@
                                 </select>
 
                                 <label class="input_diplomado_tiempo" for="input_diplomado_tiempo">Tiempo:</label>
-                                <input class="input_diplomado_tiempo" id="input_diplomado_tiempo" name="input_diplomado_tiempo"/>
+                                <input class="input_diplomado_tiempo" id="input_diplomado_tiempo" name="input_diplomado_tiempo" placeholder="años"/>
 
                             </div>
                             
@@ -296,7 +296,7 @@
                                 </select>
                                 
                                 <label class="input_doctorado_tiempo" for="input_doctorado_tiempo">Tiempo:</label>
-                                <input class="input_doctorado_tiempo" id="input_doctorado_tiempo" name="input_doctorado_tiempo"/>
+                                <input class="input_doctorado_tiempo" id="input_doctorado_tiempo" name="input_doctorado_tiempo" placeholder="años"/>
 
                             </div>
 
@@ -417,9 +417,9 @@
                             <label for="input_ingresos_extra">Tienes otros ingresos adicionales a Aspen:</label>
                             <select class="select" id="input_ingresos_extra" name="input_ingresos_extra">
                                 <option value="NO">NO</option>
-                                <option value="SI">DE $1000 A $5000</option>
-                                <option value="SI">DE $5000 A $10000</option>
-                                <option value="SI">M&Aacute;S DE $10000</option>
+                                <option value="DE $1000 A $5000">DE $1000 A $5000</option>
+                                <option value="DE $5000 A $10000">DE $5000 A $10000</option>
+                                <option value="$MAS DE $10000">M&Aacute;S DE $10000</option>
                             </select>
                             
                         </div>
